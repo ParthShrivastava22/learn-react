@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "youtube-summarizer",
+  "version": "1.0.0",
+  "description": "Summarize YouTube videos using AI",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.youtube.com/watch*"],
+      "js": ["src/content.jsx"]
+    }
+  ]
+}
